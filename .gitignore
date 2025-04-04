@@ -1,0 +1,32 @@
+# Node.js
+node_modules/
+npm-debug.log*
+.npm
+.env
+.env.local
+.env*.local
+
+# Electron
+dist/
+release/
+build/icon.icns
+app-update.yml
+*.blockmap
+Thumbs.db
+
+# OS generated
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

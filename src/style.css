@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  background: transparent;
+}
+
+.title-bar {
+  -webkit-app-region: drag;
+  height: 30px;
+  background: rgba(20, 20, 20, 0.8);
+  color: #00ff00;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+}
+
+#editor {
+  width: 100%;
+  height: calc(100vh - 30px);
+  background: rgba(30, 30, 30, 0.7);
+  border: none;
+  color: #00ff00;
+  padding: 15px;
+  font-family: 'Courier New', monospace;
+  resize: none;
+}
