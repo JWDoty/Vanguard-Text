@@ -9,8 +9,6 @@ npm-debug.log*
 # Electron
 dist/
 release/
-build/icon.icns
-app-update.yml
 *.blockmap
 Thumbs.db
 

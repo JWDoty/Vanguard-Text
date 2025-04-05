@@ -1,26 +1,65 @@
 body {
   margin: 0;
+  padding: 0;
   background: transparent;
 }
 
+.notepad-container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+}
+
 .title-bar {
-  -webkit-app-region: drag;
-  height: 30px;
-  background: rgba(20, 20, 20, 0.8);
+  padding: 5px 10px;
+  background-color: rgba(20, 20, 20, 0.8);
   color: #00ff00;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  -webkit-app-region: drag;
+}
+
+.window-controls button {
   padding: 0 10px;
+  background: none;
+  border: none;
+  color: #00ff00;
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+}
+
+.toolbar {
+  padding: 10px;
+  background-color: rgba(20, 20, 20, 0.5);
+  display: flex;
+  gap: 10px;
   align-items: center;
 }
 
-#editor {
-  width: 100%;
-  height: calc(100vh - 30px);
-  background: rgba(30, 30, 30, 0.7);
-  border: none;
+.toolbar button {
+  padding: 5px 10px;
+  background-color: rgba(50, 50, 50, 0.7);
   color: #00ff00;
-  padding: 15px;
-  font-family: 'Courier New', monospace;
+  border: 1px solid #00ff00;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#editor {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
   resize: none;
+  padding: 15px;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+}
+
+#editor:focus {
+  outline: none;
 }

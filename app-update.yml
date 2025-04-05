@@ -1,0 +1,4 @@
+provider: github
+owner: JWDoty
+repo: Vanguard-Text
+updaterCacheDirName: vanguard-text-updater

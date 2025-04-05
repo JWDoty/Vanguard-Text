@@ -1,16 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vanguard Text</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="title-bar">
-    <span>Vanguard Text</span>
-    <span id="version"></span>
+  <div class="notepad-container">
+    <div class="title-bar">
+      <span>Vanguard Text</span>
+      <span id="version"></span>
+      <div class="window-controls">
+        <button id="minimize-btn">─</button>
+        <button id="maximize-btn">□</button>
+        <button id="close-btn">✕</button>
+      </div>
+    </div>
+    <div class="toolbar">
+      <button id="new-btn">New</button>
+      <button id="open-btn">Open</button>
+      <button id="save-btn">Save</button>
+      <select id="font-select">
+        <option value="'Courier New', monospace">DOS Style</option>
+        <option value="Arial, sans-serif">Arial</option>
+      </select>
+      <input type="color" id="font-color" value="#00ff00">
+      <input type="range" id="opacity-slider" min="10" max="90" value="70">
+      <span>Opacity</span>
+    </div>
+    <textarea id="editor" spellcheck="false"></textarea>
   </div>
-  <textarea id="editor"></textarea>
   <script src="renderer.js"></script>
 </body>
 </html>

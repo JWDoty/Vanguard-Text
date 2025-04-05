@@ -1,37 +1,52 @@
 {
   "name": "vanguard-text",
   "version": "1.0.0",
-  "description": "Transparent notepad by Vanguard DevLabs",
+  "description": "Transparent notepad application by Vanguard DevLabs LLC",
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
     "dist": "electron-builder",
-    "publish": "electron-builder --publish always"
+    "publish": "electron-builder --publish always",
+    "postinstall": "electron-builder install-app-deps"
   },
-  "author": "Vanguard DevLabs LLC",
+  "author": "Joshua Doty (Vanguard DevLabs LLC)",
   "license": "MIT",
+  "dependencies": {
+    "electron-updater": "^6.6.2"
+  },
   "devDependencies": {
     "electron": "^28.0.0",
-    "electron-builder": "^24.9.1",
-    "electron-updater": "^6.1.7"
+    "electron-builder": "^24.9.1"
   },
   "build": {
-    "appId": "com.vanguarddevlabs.vanguardtext",
+    "appId": "com.jwdoty.vanguardtext",
     "productName": "Vanguard Text",
-    "copyright": "Copyright © 2024 Vanguard DevLabs LLC",
+    "copyright": "Copyright © 2025 Joshua Doty",
+    "files": [
+      "src/**/*",
+      "build/icon.ico",
+      "build/icon.png"
+    ],
     "win": {
       "target": "nsis",
-      "icon": "build/icon.ico"
+      "icon": "build/icon.ico",
+      "publisherName": "Joshua Doty"
     },
     "nsis": {
       "oneClick": false,
+      "perMachine": true,
       "allowToChangeInstallationDirectory": true,
-      "createDesktopShortcut": true
+      "createDesktopShortcut": true,
+      "deleteAppDataOnUninstall": true,
+      "include": "installer.nsh"
     },
     "publish": {
       "provider": "github",
-      "owner": "YOUR_GITHUB_USERNAME",
+      "owner": "JWDoty",
       "repo": "Vanguard-Text"
-    }
+    },
+    "extraResources": [
+      "app-update.yml"
+    ]
   }
 }
